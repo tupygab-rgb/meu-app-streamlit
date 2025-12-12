@@ -14,6 +14,7 @@ sexo = st.selectbox("Sexo Biológico: ", ["Masculino", "Feminino"])
 
 #inicializar tmb
 tmb = 0
+gcd = 0
 #Calcular TMB
 def calcular_tmb(idade, peso, altura, sexo):
     if sexo == "Masculino":
@@ -38,6 +39,18 @@ if tmb != 0:
     #Calculo GCD
     gcd = tmb * fator[atividade] 
     st.subheader(f"Seu Gasto Calórico Diário estimado é🔥: {gcd:.0f} Kcal")
+#Objetivos
+objetivo = st.selectbox("Qual seu Objetivo?",["Perder Peso", "Manter o Peso", "Ganhar Peso"])
+
+if objetivo == "Perder Peso":
+    resultado = gcd - 500
+elif objetivo == "Manter o Peso":
+    resultado = gcd
+elif objetivo == "Ganhar Peso":
+    resultado = gcd + 500
+    
+st.subheader(f"Beleza! Então você deve consumir {resultado:.0f} Kcal por dia🥗")
+
 
 
 
