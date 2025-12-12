@@ -15,6 +15,7 @@ sexo = st.selectbox("Sexo Biológico: ", ["Selecione...","Masculino", "Feminino"
 #inicializar tmb
 tmb = None
 gcd = None
+resultado = None
 #Calcular TMB
 def calcular_tmb(idade, peso, altura, sexo):
     if sexo == "Masculino":
@@ -48,8 +49,9 @@ if tmb is not None:
                resultado = gcd
            elif objetivo == "Ganhar Peso":
                resultado = gcd + 500
+        if resultado is not None:
+            st.success(f"Beleza! Então você deve consumir {resultado:.0f} Kcal por dia🥗")
 
-        st.success(f"Beleza! Então você deve consumir {resultado:.0f} Kcal por dia🥗")
 
 
 
