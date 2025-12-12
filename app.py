@@ -41,16 +41,17 @@ if tmb is not None:
         st.subheader(f"Seu Gasto Calórico Diário estimado é🔥: {gcd:.0f} Kcal")
         #Objetivos
         if gcd is not None:
-           objetivo = st.selectbox("Qual seu Objetivo?",["Perder Peso", "Manter o Peso", "Ganhar Peso"])
-
-           if objetivo == "Perder Peso":
-               resultado = gcd - 500
-           elif objetivo == "Manter o Peso":
-               resultado = gcd
-           elif objetivo == "Ganhar Peso":
-               resultado = gcd + 500
+           objetivo = st.selectbox("Qual seu Objetivo?",["Selecione...","Perder Peso", "Manter o Peso", "Ganhar Peso"])
+           if objetivo != "Selecione...":
+               if objetivo == "Perder Peso":
+                   resultado = gcd - 500
+               elif objetivo == "Manter o Peso":
+                   resultado = gcd
+               elif objetivo == "Ganhar Peso":
+                   resultado = gcd + 500
     
-           st.success(f"Beleza! Então você deve consumir {resultado:.0f} Kcal por dia🥗")
+               st.success(f"Beleza! Então você deve consumir {resultado:.0f} Kcal por dia🥗")
+
 
 
 
