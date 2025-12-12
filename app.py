@@ -6,5 +6,6 @@ st.header("Preencha seus dados abaixo para começar!")
 
 #Inputs
 nome = st.text_input("Nome: ")
-idade = st.number_input("idade: ")
+idade = st.number_input("Idade: ", min_value=0, max_value=150, step=1.0
+
 
