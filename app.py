@@ -12,6 +12,8 @@ peso = st.number_input("Peso (kg): ", min_value=30.0, max_value=400.0, step=0.1,
 altura = st.number_input("Altura (cm): ", min_value=100, max_value=300, step=1, value=None)
 sexo = st.selectbox("Sexo Biológico: ", ["Masculino", "Feminino"])
 
+#inicializar tmb
+tmb = 0
 #Calcular TMB
 def calcular_tmb(idade, peso, altura, sexo):
     if sexo == "Masculino":
@@ -36,6 +38,7 @@ if tmb != 0:
     #Calculo GCD
     gcd = tmb * fator[atividade] 
     st.subheader(f"Seu Gasto Calórico Diário estimado é🔥: {gcd:.0f} Kcal")
+
 
 
 
