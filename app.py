@@ -1,14 +1,5 @@
 import streamlit as st
 
-st.markdown("""
-    <style>
-    input:focus, textarea:focus, select:focus {
-        outline: none !important;        /* remove o contorno */
-        border: 2px solid #4CAF50 !important; /* coloca borda verde suave */
-        box-shadow: none !important;     /* remove o glow vermelho */
-    }
-    </style>
-""", unsafe_allow_html=True)
 
 #Títulos
 st.title("Calculadora de Calorias e Macros do TUPY")
@@ -21,6 +12,14 @@ peso = st.number_input("Peso (kg): ", min_value=30.0, max_value=400.0, step=0.1,
 altura = st.number_input("Altura (cm): ", min_value=100, max_value=300, step=1, value=None)
 sexo = st.selectbox("Sexo Biológico: ", ["Masculino", "Feminino"])
 
+#Calcular TMB
+def calcular_tmb(idade, peso, altura, sexo)
+    if sexo = "Masculino"
+      tmb = 88.36 + (13.4 × peso) + (4.8 × altura) − (5.7 × idade)
+    else:
+      tmb = 447.6 + (9.2 × peso) + (3.1 × altura) − (4.3 × idade)
+    return tmb
+st.write("Sua Gasto Calórico Base é:", tmb)
 
 
 
