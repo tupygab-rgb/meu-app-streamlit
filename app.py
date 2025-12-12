@@ -27,8 +27,9 @@ else:
     st.warning("Preencha todos campos acima para continuar.")
 
 #Perguntar nível de atividade física e calcular Gasto Calórico Diário
-st.write("Agora, vamos calcular seu gasto calórico de acordo com seu nível de atividade💪:"
+st.write("Agora, vamos calcular seu gasto calórico de acordo com seu nível de atividade💪:")
 atividade = st.selectbox("Nível de atividade física:", ["Sedentário", "Levemente ativo", "Moderadamente ativo", "Muito ativo", "Extremamente ativo"])
+
 
 
 
