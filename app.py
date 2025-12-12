@@ -79,14 +79,17 @@ if tmb is not None:
             
             st.warning("""
 ⚠️ *Importante!*  
-Deixar claro que uma alimentação extremamente regrada, baseada apenas em proteínas, carboidratos e gorduras, provavelmente não será a melhor para sua saúde e vitalidade!  
+Deix0 claro que uma alimentação extremamente regrada, baseada apenas em proteínas, carboidratos e gorduras, provavelmente não será a melhor para sua saúde e vitalidade!  
 
 Ela pode ajudar esteticamente, mas para que realmente seja completa, procure manter uma alimentação equilibrada e natural todos os dias.
+
+Além disso, essa calculadora foi feita de forma amadora, sem qualquer formação envolvida do autor. Objetivo é apenas te ajudar, entretanto, não use-a como verdade absoluta.
 """)
 
             st.markdown("""Mais importante do que contar calorias é ouvir seu corpo e escolher alimentos que promovam saúde e vitalidade.
             """)
     
+
 
 
 
