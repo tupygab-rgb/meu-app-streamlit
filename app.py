@@ -75,14 +75,16 @@ if tmb is not None:
             st.write(f"Carboidratos: {carb_g:.1f} g")
 
             #Agradecimento e aviso
-            st.markdown("""Espero que de alguma forma possa ter te ajudado com essa Calculadora!👊
+            st.markdown("""Espero que de alguma forma possa ter te ajudado com essa Calculadora!👊""")
             
-            Acredito que é *Importante*⚠️ Deixar claro que uma alimentação extremamente regrada assim, e baseada apenas em quantidades de proteínas, carbohidratos e gorduras, provavelmente não será a melhor para sua saúde e vitalidade!
+            st.warning("Acredito que é *Importante*⚠️ Deixar claro que uma alimentação extremamente regrada assim, e baseada apenas em quantidades de proteínas, carbohidratos e gorduras, provavelmente não será a melhor para sua saúde e vitalidade!
             
-            Ela pode te ajudar estéticamente, mas para que realmente seja completa, procure manter uma alimentação equilibrada e natural todos os dias.  
-            Mais importante do que contar calorias é ouvir seu corpo e escolher alimentos que promovam saúde e vitalidade.
+            Ela pode te ajudar estéticamente, mas para que realmente seja completa, procure manter uma alimentação equilibrada e natural todos os dias.")  
+           
+            st.markdown("""Mais importante do que contar calorias é ouvir seu corpo e escolher alimentos que promovam saúde e vitalidade.
             """)
     
+
 
 
 
