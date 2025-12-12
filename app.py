@@ -23,19 +23,20 @@ def calcular_tmb(idade, peso, altura, sexo):
       tmb = 447.6 + (9.2*peso) + (3.1*altura) - (4.3*idade)
     return tmb
 #Verificação se todos campos foram preenchidos para Calcular a TMB
-if idade and peso and altura:
+if idade is not None and peso is not None and altura is not None:
     tmb = calcular_tmb(idade, peso, altura, sexo)
     st.subheader(f"Sua Gasto Calórico Base é💥: {tmb:.0f} Kcal")
 else:
     st.warning("Preencha todos campos acima para continuar.")
 
 #Perguntar nível de atividade física e calcular Gasto Calórico Diário
-st.write("Agora, vamos calcular seu gasto calórico de acordo com seu nível de atividade💪:")
-atividade = st.selectbox("Nível de atividade física:", ["Sedentário", "Levemente ativo", "Moderadamente ativo", "Muito ativo", "Extremamente ativo"])
+if tmb is not None:
+    st.write("Agora, vamos calcular seu gasto calórico de acordo com seu nível de atividade💪:")
+    atividade = st.selectbox("Nível de atividade física:", ["Sedentário", "Levemente ativo", "Moderadamente ativo", "Muito ativo", "Extremamente ativo"])
 
-fator = {"Sedentário": 1.2, "Levemente ativo": 1.375, "Moderadamente ativo": 1.55, "Muito ativo": 1.725, "Extremamente ativo": 1.9} 
+    fator = {"Sedentário": 1.2, "Levemente ativo": 1.375, "Moderadamente ativo": 1.55, "Muito ativo": 1.725, "Extremamente ativo": 1.9} 
 
-if tmb != 0:
+if tmb is not None:
     #Calculo GCD
     gcd = tmb * fator[atividade] 
     st.subheader(f"Seu Gasto Calórico Diário estimado é🔥: {gcd:.0f} Kcal")
@@ -51,6 +52,7 @@ if tmb != 0:
            resultado = gcd + 500
     
        st.success(f"Beleza! Então você deve consumir {resultado:.0f} Kcal por dia🥗")
+
 
 
 
