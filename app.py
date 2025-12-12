@@ -80,9 +80,10 @@ if tmb is not None:
             Acredito que é *Importante*⚠️ Deixar claro que uma alimentação extremamente regrada assim, e baseada apenas em quantidades de proteínas, carbohidratos e gorduras, provavelmente não será a melhor para sua saúde e vitalidade!
             
             Ela pode te ajudar estéticamente, mas para que realmente seja completa, procure manter uma alimentação equilibrada e natural todos os dias.  
-Mais importante do que contar calorias é ouvir seu corpo e escolher alimentos que promovam saúde e vitalidade.
-""")
+            Mais importante do que contar calorias é ouvir seu corpo e escolher alimentos que promovam saúde e vitalidade.
+            """)
     
+
 
 
 
