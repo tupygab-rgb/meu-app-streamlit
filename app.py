@@ -10,7 +10,7 @@ nome = st.text_input("Nome: ")
 idade = st.number_input("Idade: ", min_value=10, max_value=150, step=1, value=None)
 peso = st.number_input("Peso (kg): ", min_value=30.0, max_value=400.0, step=0.1, value=None)
 altura = st.number_input("Altura (cm): ", min_value=100, max_value=300, step=1, value=None)
-sexo = st.selectbox("Sexo Biológico: ", ["Masculino", "Feminino"])
+sexo = st.selectbox("Sexo Biológico: ", ["Selecione...","Masculino", "Feminino"])
 
 #inicializar tmb
 tmb = None
@@ -23,7 +23,7 @@ def calcular_tmb(idade, peso, altura, sexo):
       tmb = 447.6 + (9.2*peso) + (3.1*altura) - (4.3*idade)
     return tmb
 #Verificação se todos campos foram preenchidos para Calcular a TMB
-if idade is not None and peso is not None and altura is not None:
+if sexo != "Selecione..." and idade is not None and peso is not None and altura is not None:
     tmb = calcular_tmb(idade, peso, altura, sexo)
     st.subheader(f"Sua Gasto Calórico Base é💥: {tmb:.0f} Kcal")
 else:
@@ -50,6 +50,7 @@ if tmb is not None:
            resultado = gcd + 500
     
        st.success(f"Beleza! Então você deve consumir {resultado:.0f} Kcal por dia🥗")
+
 
 
 
