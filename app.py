@@ -51,7 +51,19 @@ if tmb is not None:
                resultado = gcd + 500
         if resultado is not None:
             st.success(f"Beleza! Então você deve consumir {resultado:.0f} Kcal por dia🥗")
-
+            #macros
+            if objetivo == "Perder Peso":
+               fat_prot, fat_gord = 2.0, 0.75
+            elif objetivo == "Manter o Peso":
+               fat_prot, fat_gord = 1.8, 0.75
+            elif objetivo == "Ganhar Peso":
+               fat_prot, fat_gord = 1.8, 1.0
+            prot_g = peso * fat_prot
+            gord_g = peso * fat_gord
+            kcal_prot = prot_g * 4
+            kcal_gord = gord_g * 9
+            kcal_carb = resultado - (kcal_prot + kcal_gord)
+            carb_g = kcal_carb / 4
 
 
 
