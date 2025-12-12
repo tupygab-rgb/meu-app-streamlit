@@ -4,6 +4,11 @@ import streamlit as st
 #Títulos
 st.title("Calculadora de Calorias e Macros do TUPY")
 st.header("Preencha seus dados abaixo para começar!")
+st.markdown("""
+🌿 **Alimentação Natural e Consciente**  
+Lembre-se: o que você ingere influencia seu bem-estar completo.  
+Procure priorizar alimentos naturais, frescos e equilibrados, criando uma rotina alimentar que respeite seu corpo e traga vitalidade para todas as áreas da sua vida.
+""")
 
 #Inputs
 nome = st.text_input("Nome: ")
@@ -69,6 +74,8 @@ if tmb is not None:
             st.write(f"Gorduras: {gord_g:.1f} g")
             st.write(f"Carboidratos: {carb_g:.1f} g")
 
+            #Agradecimento e aviso
+    
 
 
 
