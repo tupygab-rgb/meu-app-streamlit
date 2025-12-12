@@ -64,10 +64,11 @@ if tmb is not None:
             kcal_gord = gord_g * 9
             kcal_carb = resultado - (kcal_prot + kcal_gord)
             carb_g = kcal_carb / 4
-            st.subheader("Distribuição de Macronutrientes 🥩🥑🍚")
+            st.subheader("Distribuição de Macros 🥩🥑🍚")
             st.write(f"Proteínas: {prot_g:.1f} g")
             st.write(f"Gorduras: {gord_g:.1f} g")
             st.write(f"Carboidratos: {carb_g:.1f} g")
+
 
 
 
