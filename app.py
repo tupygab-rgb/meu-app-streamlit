@@ -77,13 +77,17 @@ if tmb is not None:
             #Agradecimento e aviso
             st.markdown("""Espero que de alguma forma possa ter te ajudado com essa Calculadora!👊""")
             
-            st.warning("Acredito que é *Importante*⚠️ Deixar claro que uma alimentação extremamente regrada assim, e baseada apenas em quantidades de proteínas, carbohidratos e gorduras, provavelmente não será a melhor para sua saúde e vitalidade!
-            
-            Ela pode te ajudar estéticamente, mas para que realmente seja completa, procure manter uma alimentação equilibrada e natural todos os dias.")  
-           
+            st.warning("""
+⚠️ *Importante!*  
+Deixar claro que uma alimentação extremamente regrada, baseada apenas em proteínas, carboidratos e gorduras, provavelmente não será a melhor para sua saúde e vitalidade!  
+
+Ela pode ajudar esteticamente, mas para que realmente seja completa, procure manter uma alimentação equilibrada e natural todos os dias.
+""")
+
             st.markdown("""Mais importante do que contar calorias é ouvir seu corpo e escolher alimentos que promovam saúde e vitalidade.
             """)
     
+
 
 
 
