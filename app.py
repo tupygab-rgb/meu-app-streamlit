@@ -8,8 +8,8 @@ st.markdown("""
 🌿 **Alimentação Natural e Consciente**  
 Lembre-se: o que você ingere influencia seu bem-estar completo.  
 Procure priorizar alimentos naturais, frescos e equilibrados, criando uma rotina alimentar que respeite seu corpo e traga vitalidade para todas as áreas da sua vida.
-"Esta calculadora serve apenas como referência. O mais importante é escolher alimentos naturais e frescos, escutando seu corpo e cultivando vitalidade física e espiritual, respeitando a harmonia do seu ser."""")
-
+Esta calculadora serve apenas como referência. O mais importante é escolher alimentos naturais e frescos, escutando seu corpo e cultivando vitalidade física e espiritual, respeitando a harmonia do seu ser.""")
+ 
 #Inputs
 nome = st.text_input("Nome: ")
 idade = st.number_input("Idade: ", min_value=10, max_value=150, step=1, value=None)
@@ -89,6 +89,7 @@ Além disso, essa calculadora foi feita de forma amadora, sem qualquer formaçã
             st.markdown("""Mais importante do que contar calorias é ouvir seu corpo e escolher alimentos que promovam saúde e vitalidade.
             """)
     
+
 
 
 
