@@ -24,7 +24,8 @@ if idade is not None and peso is not None and altura is not None:
     tmb = calcular_tmb(idade, peso, altura, sexo)
     st.write("Sua Gasto Calórico Base é:", tmb)
 else:
-    st.warning("Preencha todos campos acima")
+    st.warning("Preencha todos campos acima para continuar.")
+
 
 
 
