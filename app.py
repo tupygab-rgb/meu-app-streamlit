@@ -22,9 +22,10 @@ def calcular_tmb(idade, peso, altura, sexo):
 #Verificação se todos campos foram preenchidos para Calcular a TMB
 if idade is not None and peso is not None and altura is not None:
     tmb = calcular_tmb(idade, peso, altura, sexo)
-    st.header("Sua Gasto Calórico Base é💥:", tmb)
+    st.header(f"Sua Gasto Calórico Base é💥: {tmb}")
 else:
     st.warning("Preencha todos campos acima para continuar.")
+
 
 
 
