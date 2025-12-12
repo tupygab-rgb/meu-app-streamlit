@@ -13,8 +13,8 @@ altura = st.number_input("Altura (cm): ", min_value=100, max_value=300, step=1, 
 sexo = st.selectbox("Sexo Biológico: ", ["Masculino", "Feminino"])
 
 #inicializar tmb
-tmb = 0
-gcd = 0
+tmb = None
+gcd = None
 #Calcular TMB
 def calcular_tmb(idade, peso, altura, sexo):
     if sexo == "Masculino":
@@ -23,7 +23,7 @@ def calcular_tmb(idade, peso, altura, sexo):
       tmb = 447.6 + (9.2*peso) + (3.1*altura) - (4.3*idade)
     return tmb
 #Verificação se todos campos foram preenchidos para Calcular a TMB
-if idade is not None and peso is not None and altura is not None:
+if idade and peso and altura:
     tmb = calcular_tmb(idade, peso, altura, sexo)
     st.subheader(f"Sua Gasto Calórico Base é💥: {tmb:.0f} Kcal")
 else:
@@ -39,17 +39,20 @@ if tmb != 0:
     #Calculo GCD
     gcd = tmb * fator[atividade] 
     st.subheader(f"Seu Gasto Calórico Diário estimado é🔥: {gcd:.0f} Kcal")
-#Objetivos
-objetivo = st.selectbox("Qual seu Objetivo?",["Perder Peso", "Manter o Peso", "Ganhar Peso"])
+    #Objetivos
+    if gcd is not None:
+       objetivo = st.selectbox("Qual seu Objetivo?",["Perder Peso", "Manter o Peso", "Ganhar Peso"])
 
-if objetivo == "Perder Peso":
-    resultado = gcd - 500
-elif objetivo == "Manter o Peso":
-    resultado = gcd
-elif objetivo == "Ganhar Peso":
-    resultado = gcd + 500
+       if objetivo == "Perder Peso":
+           resultado = gcd - 500
+       elif objetivo == "Manter o Peso":
+           resultado = gcd
+       elif objetivo == "Ganhar Peso":
+           resultado = gcd + 500
     
-st.subheader(f"Beleza! Então você deve consumir {resultado:.0f} Kcal por dia🥗")
+       st.success(f"Beleza! Então você deve consumir {resultado:.0f} Kcal por dia🥗")
+
+
 
 
 
