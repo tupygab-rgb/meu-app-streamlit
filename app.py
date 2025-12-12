@@ -14,12 +14,13 @@ sexo = st.selectbox("Sexo Biológico: ", ["Masculino", "Feminino"])
 
 #Calcular TMB
 def calcular_tmb(idade, peso, altura, sexo):
-    if sexo == "Masculino"
+    if sexo == "Masculino":
       tmb = 88.36 + (13.4*peso) + (4.8*altura) - (5.7*idade)
     else:
       tmb = 447.6 + (9.2*peso) + (3.1*altura) - (4.3*idade)
     return tmb
 st.write("Sua Gasto Calórico Base é:", tmb)
+
 
 
 
