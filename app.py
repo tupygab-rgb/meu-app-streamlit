@@ -19,8 +19,13 @@ def calcular_tmb(idade, peso, altura, sexo):
     else:
       tmb = 447.6 + (9.2*peso) + (3.1*altura) - (4.3*idade)
     return tmb
-tmb = calcular_tmb(idade, peso, altura, sexo)
-st.write("Sua Gasto Calórico Base é:", tmb)
+#Verificação se todos campos foram preenchidos para Calcular a TMB
+if idade is not None, peso is not None, altura is not None:
+    tmb = calcular_tmb(idade, peso, altura, sexo)
+    st.write("Sua Gasto Calórico Base é:", tmb)
+else:
+    st.warning("Preencha todos campos acima")
+
 
 
 
