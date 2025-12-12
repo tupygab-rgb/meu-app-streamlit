@@ -1,13 +1,12 @@
 import streamlit as st
 
-# --- CSS para mudar a borda dos inputs ---
 st.markdown("""
     <style>
-        /* Muda a borda quando o campo está focado */
-        input:focus, select:focus, textarea:focus {
-            border: 2px solid #4CAF50 !important; /* borda verde */
-            box-shadow: 0 0 5px #4CAF50 !important;
-        }
+    input:focus, textarea:focus, select:focus {
+        outline: none !important;        /* remove o contorno */
+        border: 2px solid #4CAF50 !important; /* coloca borda verde suave */
+        box-shadow: none !important;     /* remove o glow vermelho */
+    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -21,6 +20,7 @@ idade = st.number_input("Idade: ", min_value=10, max_value=150, step=1, value=No
 peso = st.number_input("Peso (kg): ", min_value=30.0, max_value=400.0, step=0.1, value=None)
 altura = st.number_input("Altura (cm): ", min_value=100, max_value=300, step=1, value=None)
 sexo = st.selectbox("Sexo Biológico: ", ["Masculino", "Feminino"])
+
 
 
 
