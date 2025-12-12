@@ -75,7 +75,7 @@ if tmb is not None:
             st.write(f"Carboidratos: {carb_g:.1f} g")
 
             #Agradecimento e aviso
-            st.markdown("""{nome}, espero que de alguma forma possa ter te ajudado com essa Calculadora!👊""")
+            st.markdown("""f{nome}, espero que de alguma forma possa ter te ajudado com essa Calculadora!👊""")
             
             st.warning("""
 ⚠️ *Importante!*  
@@ -89,6 +89,7 @@ Além disso, essa calculadora foi feita de forma amadora, sem qualquer formaçã
             st.markdown("""Mais importante do que contar calorias é ouvir seu corpo e escolher alimentos que promovam saúde e vitalidade.
             """)
     
+
 
 
 
