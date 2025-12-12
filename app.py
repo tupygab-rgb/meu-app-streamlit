@@ -32,10 +32,11 @@ else:
 #Perguntar nível de atividade física e calcular Gasto Calórico Diário
 if tmb is not None:
     st.write("Agora, vamos calcular seu gasto calórico de acordo com seu nível de atividade💪:")
-    atividade = st.selectbox("Nível de atividade física:", ["Sedentário", "Levemente ativo", "Moderadamente ativo", "Muito ativo", "Extremamente ativo"])
+    atividade = st.selectbox("Nível de atividade física:", ["Selecione...", "Sedentário", "Levemente ativo", "Moderadamente ativo", "Muito ativo", "Extremamente ativo"])
 
     fator = {"Sedentário": 1.2, "Levemente ativo": 1.375, "Moderadamente ativo": 1.55, "Muito ativo": 1.725, "Extremamente ativo": 1.9} 
     #Calculo GCD
+    if atividade != "Selecione...":
     gcd = tmb * fator[atividade] 
     st.subheader(f"Seu Gasto Calórico Diário estimado é🔥: {gcd:.0f} Kcal")
     #Objetivos
@@ -50,6 +51,7 @@ if tmb is not None:
            resultado = gcd + 500
     
        st.success(f"Beleza! Então você deve consumir {resultado:.0f} Kcal por dia🥗")
+
 
 
 
