@@ -19,7 +19,9 @@ def calcular_tmb(idade, peso, altura, sexo):
     else:
       tmb = 447.6 + (9.2*peso) + (3.1*altura) - (4.3*idade)
     return tmb
-st.write("Sua Gasto Calórico Base é:", tmb)
+TMB = calcular_tmb(idade, peso, altura, sexo)
+st.write("Sua Gasto Calórico Base é:", TMB)
+
 
 
 
